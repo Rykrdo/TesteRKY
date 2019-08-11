@@ -52,7 +52,6 @@ header {
 .space-between {
   justify-content: flex-end;
 }
-
 .flex {
   flex: 1;
 }
@@ -60,11 +59,36 @@ header {
   header {
     .flex-header {
       display: block;
-      text-align: center;
+      text-align: center
     }
 
     .nav-bar ul {
       display: none;
     }
+  }
+}
+@media screen and (min-width: 720px) and (max-width: 1024px) {
+  .menu-mobilie{
+    display: block;
+  }
+  .flex-header {
+    display: block;
+    text-align: center
+  }
+  
+  .nav-bar nav {
+    display: none !important;
+  }
+}
+@media screen and (max-width : 720px){
+  .menu-mobilie{
+    display: block;
+  }
+ 
+}
+
+@media screen and (min-width: 1024px) {
+  .menu-mobilie{
+    display: none;
   }
 }

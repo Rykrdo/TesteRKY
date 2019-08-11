@@ -28,7 +28,7 @@ export class ListComponent implements OnInit {
     this.totallist = 0;
     this.transitionList.forEach((v, k) => {
 
-      if (v.metodo === 'venda') {
+      if (v.metodo === '+') {
         this.totallist += v.valor;
       } else {
         this.totallist -= v.valor;
