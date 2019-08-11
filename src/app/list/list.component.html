@@ -1,16 +1,15 @@
 
 <h2 class="text-center">Extrato de transação</h2>
-<i class="fas fa-bars"></i>a
 <ul class="list-group">
     <li class="active">
         Operação - Descrição <span>Valor</span>
     </li>
     <li *ngFor="let transition of transitionList">
-        {{transition.metodo}}    {{transition.descricao}}<span>{{transition.valor}}</span>
+        {{transition.metodo}}    {{transition.descricao}}<span>{{transition.valor | currency:'BRL':'symbol'}}</span>
     </li>
 
     <li class="footer-total">
-        Total: <span><small>(Lucro)</small> {{ totallist }} R$7.0000</span>
+        Total: <span><small>({{statusTransaction}})</small> {{ totallist  |  currency : 'BRL' : 'symbol'}}</span>
     </li>
 </ul>
 

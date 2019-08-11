@@ -11,6 +11,8 @@ export class ListComponent implements OnInit {
 
   transitionList: Array<Transition>;
   totallist: any;
+  statusTransaction: string;
+
 
   constructor(
     private transitionService: TransitionService
@@ -22,17 +24,28 @@ export class ListComponent implements OnInit {
 
   }
 
+  updateList(): void {
+    this.totallist = 0;
+    this.transitionList.forEach((v, k) => {
+
+      if (v.metodo === 'venda') {
+        this.totallist += v.valor;
+      } else {
+        this.totallist -= v.valor;
+      }
+      if (this.totallist > 0) {
+        this.statusTransaction = 'Lucro';
+      } else {
+        this.statusTransaction = 'Prejuizo';
+      }
+
+    });
+  }
+
   listenTransition(): void {
-
-    // Se Inscreve (Subscribe) para ouvir a variavel, toda vez que alguem der next na variavel no componente de serviço, o valor aqui altera
-    // Você cria uma função callback com o valor que vai ser retornado
-    this.totallist = 0 ;
-    this.transitionService.listenTransition().subscribe( (transitionList: Array<Transition>) => {
-      // Pega a lista de Transição que foi jogada no Next e joga na variavel desse componente
-      this.totallist += 1;
+    this.transitionService.listenTransition().subscribe((transitionList: Array<Transition>) => {
       this.transitionList = transitionList;
-
-
+      this.updateList();
     });
   }
 

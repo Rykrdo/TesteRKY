@@ -1,80 +1,70 @@
-header{
-  nav{
-    ul{
+header {
+  position: relative;
+  .menu-mobilie {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+  }
+  nav {
+    ul {
       padding: 0;
       margin: 0;
-      li{
+      li {
         display: inline-block;
         list-style: none;
-        a{
+        a {
           padding: 20px;
           margin-right: 1px;
           background-color: #fff;
           color: #333;
           text-transform: uppercase;
-          font-size: 14px
+          font-size: 14px;
         }
       }
     }
   }
 }
 
-.flex-header{
+.flex-header {
   display: flex;
 }
-.nav-bar, .logo{
+.nav-bar,
+.logo {
   width: 100%;
 }
-.nav-bar{
-  a{
+.nav-bar {
+  a {
     text-decoration: none;
     font-weight: 600;
-    color: #767
+    color: #767;
   }
 }
-.logo{
-  a{
+.logo {
+  a {
     padding: 0;
     margin: 0;
-    color: #777;
+    color: #222;
     font-size: 20px;
-    text-decoration: none
+    text-decoration: none;
   }
 }
 .space-between {
-	justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .flex {
-	flex: 1;
+  flex: 1;
 }
-
-
-
-@media screen and (max-width : 720px){
-  header{
-    .flex-header{
+@media screen and (max-width: 720px) {
+  header {
+    .flex-header {
       display: block;
-      text-align: center
-
+      text-align: center;
     }
-    background-color: orange;
-    .logo{
-      a{
-        color: #fff !important
-      }
-    }
-    .nav-bar ul{
-      display: none
-    }
-  }
-}
-@media screen and (min-width : 720px){
-  header{
 
-    background-color: blue;
-    .nav-bar{
-
+    .nav-bar ul {
+      display: none;
     }
   }
 }

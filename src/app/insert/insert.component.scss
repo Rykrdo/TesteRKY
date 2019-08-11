@@ -1,4 +1,5 @@
-.form-control, select{
+.form-control,
+select {
   width: 100%;
   line-height: 1.8;
   height: 32px;
@@ -6,11 +7,12 @@
   -moz-border-radius: 4px;
   border-radius: 4px;
   border: solid 1px #dbd7d7;
+  text-indent: 5px;
 }
-.form-group-line{
+.form-group-line {
   margin-bottom: 15px;
 
-  button{
+  button {
     background-color: #333;
     color: #fff;
     border: 0;
@@ -20,30 +22,24 @@
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
-    &:hover{
+    &:hover {
       background-color: #fff;
       color: #333;
       border-color: #333;
     }
   }
 }
-label{
+label {
   margin-bottom: 5px;
   display: block;
 }
-.box-transaction{
-  // width: 40%;
+.box-transaction {
   border: solid 1px #ccc;
   padding: 0 20px;
-  // float: left;
-
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
 }
-
-
-
 button[disabled] {
   cursor: not-allowed;
   filter: alpha(opacity=0.2);
@@ -51,10 +47,7 @@ button[disabled] {
   box-shadow: none;
   opacity: 0.2;
 }
-
-.transaction-list{
-  // width: 50%;
-  // float: right;
+.transaction-list {
   border: solid 1px #f9f7f7;
   padding: 0 20px;
   background-color: #f9f7f7;
@@ -62,4 +55,3 @@ button[disabled] {
   -moz-border-radius: 4px;
   border-radius: 4px;
 }
-
