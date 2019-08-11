@@ -1,6 +1,6 @@
 
 <h2 class="text-center">Extrato de transação</h2>
-<ul class="list-group">
+<ul class="list-group" *ngIf="transitionList.length > 0">
     <li class="active">
         Operação - Descrição <span>Valor</span>
     </li>
@@ -13,3 +13,6 @@
     </li>
 </ul>
 
+<div *ngIf="transitionList.length <= 0">
+  <p class="text-center">Nenhuma transação no momento!</p>
+</div>
