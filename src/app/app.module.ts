@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { ListComponent } from './list/list.component';
 import { InsertComponent } from './insert/insert.component';
 import { HeaderComponent } from './header/header.component';
+import { MenuComponent } from './header/menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
     InsertComponent,
-    HeaderComponent
+    HeaderComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

@@ -75,7 +75,7 @@ header {
     display: block;
     text-align: center
   }
-  
+
   .nav-bar nav {
     display: none !important;
   }
@@ -84,11 +84,58 @@ header {
   .menu-mobilie{
     display: block;
   }
- 
+
 }
 
 @media screen and (min-width: 1024px) {
+
   .menu-mobilie{
     display: none;
   }
+}
+.offsetmenu{
+  display:none;
+  background-color: #333;
+  width: 200px;
+  position: absolute;
+  height: 100%;
+  top:0;
+  right: 0;
+  text-align: right;
+  max-height: 100%;
+  bottom: 0;
+  .bt-close{
+      position: relative;
+      text-align: left;
+
+    span{
+        display: inline-block;
+        color: #fff;
+        padding: 20px;
+        text-align: left
+    }
+  }
+  ul{
+    padding: 0;
+    margin: 0;
+    li{
+      list-style: none;
+      margin-bottom: 10px;
+      a{
+        color: #fff;
+        text-decoration: none;
+        padding-right: 25px;
+        display: block;
+        padding-top: 5px;
+        padding-bottom: 5px;
+       
+      } a.active{
+        background-color: #ccc;
+        color: #333;
+      }
+    }
+  }
+}
+.offsetmenu.on{
+  display:block;
 }

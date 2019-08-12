@@ -6,10 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  menuOn = false;
 
+  openShow(){
+    if (this.menuOn === true) {
+      this.menuOn = false;
+    } else {
+      this.menuOn = true;
+    }
+    console.log(this.menuOn);
+  }
   constructor() { }
 
   ngOnInit() {
+    console.log(this.menuOn)
   }
 
 }

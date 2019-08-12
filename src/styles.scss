@@ -24,6 +24,9 @@ div.has-error .form-control{
 div.has-success .form-control{
   border-color: #00e586
 }
+.clearfix{
+    clear:both;
+}
 
 h1{
   font-weight: 100;
@@ -252,4 +255,82 @@ $porcent_column : 8.333333333333333%;
     &.footer{
         border-top: 4px double gray;
     }
+}
+
+.form-control,
+select {
+  width: 100%;
+  line-height: 1.8;
+  height: 32px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: solid 1px #dbd7d7;
+  text-indent: 5px;
+}
+select{
+  height: 36px !important;
+}
+.form-group-line {
+  margin-bottom: 15px;
+
+  button {
+    background-color: #333;
+    color: #fff;
+    border: 0;
+    width: 100%;
+    padding: 10px;
+    border: solid 1px transparent;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    &:hover {
+      background-color: #fff;
+      color: #333;
+      border-color: #333;
+    }
+  }
+}
+label {
+  margin-bottom: 5px;
+  display: block;
+}
+.box-transaction {
+  border: solid 1px #ccc;
+  padding: 0 20px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+button[disabled] {
+  cursor: not-allowed;
+  filter: alpha(opacity=0.2);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  opacity: 0.2;
+}
+.transaction-list {
+  border: solid 1px #f9f7f7;
+  padding: 0 20px;
+  background-color: #f9f7f7;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+@media screen and (min-width: 720px) and (max-width: 1024px) {
+    .form-transaction
+    {
+        .col{
+            padding-right:0;
+        }
+    }
+  .form-group-line {
+    button{
+      display: inline-block;
+      width: auto;
+      float: right;
+      margin-bottom: 20px;
+    }
+  }
 }

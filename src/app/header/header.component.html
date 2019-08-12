@@ -5,7 +5,7 @@
             <a href="#" alt="Controle Financeiro">Controle Financeiro</a>
           </div>
           <div id="nav" class="nav-bar flex">
-           <div class="menu-mobilie">
+           <div class="menu-mobilie" (click)="openShow()">
               <i class="fa fa-bars" aria-hidden="true"></i>
            </div>
             <nav>
@@ -19,3 +19,15 @@
     </div>
   </div>
 </header>
+<!-- <app-menu></app-menu> -->
+
+<div class="offsetmenu" (click)="openShow()" [class.on]="menuOn == true">
+  <div class="bt-close">
+    <span><i class="fa fa-close" aria-hidden="true"></i></span>
+  </div>
+  <ul>
+    <li><a href="#">Resumo</a></li>
+    <li><a href="#">Dashboard</a></li>
+    <li><a class="active" href="#">Configurações</a></li>
+  </ul>
+</div>
